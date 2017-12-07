@@ -5,6 +5,7 @@ require 'sinatra/base'
 require 'capybara/rspec'
 require 'capybara'
 require 'rspec'
+require 'features/web_helpers.rb'
 Capybara.app = BattleApp
 
 
