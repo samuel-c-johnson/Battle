@@ -8,4 +8,11 @@ feature 'Shows players hit points' do
     expect(page).to have_content 'player_2_name HP: 100'
   end
 
+  scenario 'Reduces player 2\'s hitpoints by 10 after being attacked' do
+    sign_in_and_play
+    click_button("Attack player_2_name")
+    visit "/attack"
+    expect(page).to have_content "player_2_name HP: 90"
+    end
+
 end
