@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require './lib/player.rb'
+require './lib/game.rb'
 
 class BattleApp < Sinatra::Base
   # get '/' do
@@ -24,8 +25,8 @@ class BattleApp < Sinatra::Base
   end
 
   post '/attack' do
-    attack
-    @player_2.hitpoints
+    @player_2 = $player_2
+    Game.new.attack(@player_2)
     redirect ('/attack')
   end
 
