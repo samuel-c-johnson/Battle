@@ -1,11 +1,11 @@
 require 'sinatra/base'
-require './spec/player_spec.rb'
+require './lib/player.rb'
 
 class BattleApp < Sinatra::Base
   # get '/' do
   #   'Testing infrastructure working!'
   # end
-  enable :sessions
+  #enable :sessions
 
   get '/' do
     erb(:index)

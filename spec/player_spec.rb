@@ -1,4 +1,5 @@
-require 'player'
+require './lib/player.rb'
+require 'rspec'
 
 describe Player do
   subject(:sam) { Player.new('Sam') }
