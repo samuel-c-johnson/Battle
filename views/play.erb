@@ -5,8 +5,8 @@
   <ul>
     <li>
       <p> <%= @player_1.name %> HP: 100 </p>
-      <a href="/attack"><button>Attack <%= @player_2.name %></button></a>
-    </li>
+      <form action="/attack/new" method='post'>
+        <input type='submit' value='Attack'> </form>
 
     <li>
       <p> <%= @player_2.name %> HP: 100 </p>

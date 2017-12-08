@@ -23,23 +23,27 @@ class BattleApp < Sinatra::Base
     erb(:play)
   end
 
-  get '/attack' do
+  post '/attack/new' do
     @player_1 = $game.player_1
     @player_2 = $game.player_2
-    @game = Game.new(@player_1, @player_2)
-    @game.damage(@player_2)
-    #redirect ('/play')
+    $game.damage($game.victim)
+    redirect ('/continue')
+
+  end
+
+  get '/attack' do
+    $game.attacker_swap
+    $game.victim_swap
+
+    @player_1 = $game.player_1
+    @player_2 = $game.player_2
     erb(:attack)
   end
 
-  # get '/attack' do
-  #   @player_1 = $player_1
-  #   @player_2 = $player_2
-  #   erb(:attack)
-  # end
+  get '/continue' do
+    erb(:continue)
 
-
-
+    end
 
 
 

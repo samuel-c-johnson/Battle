@@ -2,10 +2,13 @@
 
 class Game
 
-  attr_reader 
+  attr_reader :attacker, :victim
 
   def initialize(player_1, player_2)
     @players = [player_1, player_2]
+    @attacker = player_1
+    @victim = player_2
+
 
   end
 
@@ -23,5 +26,23 @@ class Game
 
   def player_2
     @players.last
+  end
+
+  def attacker_swap
+    if @attacker == player_1
+      @attacker = player_2
+    else
+      @attacker == player_2
+      @attacker = player_1
+    end
+  end
+
+  def victim_swap
+    if @victim == player_1
+      @victim = player_2
+    else
+      @victim == player_2
+      @victim = player_1
+    end
   end
 end

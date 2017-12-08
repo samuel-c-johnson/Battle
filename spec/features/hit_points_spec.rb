@@ -10,8 +10,8 @@ feature 'Shows players hit points' do
 
   scenario 'Reduces player 2\'s hitpoints by 10 after being attacked' do
     sign_in_and_play
-    click_button("Attack player_2_name")
-    visit "/attack"
+    click_button("Attack")
+    click_button("Continue")
     expect(page).to have_content "player_2_name HP: 90"
     end
 

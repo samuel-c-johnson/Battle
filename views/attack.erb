@@ -1,10 +1,10 @@
 <html>
-  <h1> <%= @player_1.name %> attacked <%= @player_2.name %></h1>
 
   <ul>
     <li>
       <p> <%= @player_1.name %> HP: <%= @player_1.hitpoints %> </p>
-      <a href="/attack"><button>Attack <%= @player_2.name %></button></a>
+      <form action="/attack/new" method='post'>
+        <input type='submit' value='Attack'> </form>
     </li>
 
     <li>
