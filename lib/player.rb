@@ -1,5 +1,5 @@
 class Player
-  attr_reader :name
+  attr_reader :name, :hitpoints
 
   HITPOINTS = 100
 
@@ -12,8 +12,10 @@ class Player
     puts "#{@player_1.name} attacked #{@player_2.name}"
   end
 
-  def hitpoints
+  def reduce_hp
     @hitpoints -= 10
   end
+
+
 
 end

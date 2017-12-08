@@ -4,11 +4,7 @@ feature 'Attack' do
     find_button("Attack player_2_name").visible?
   end
 
-  scenario 'An "attack" button is rendered after signing in' do
-    sign_in_and_play
-    find_button("Attack player_1_name").visible?
-  end
-
+  
   scenario 'Player 1 attacks player 2' do
     sign_in_and_play
     click_button('Attack player_2_name')

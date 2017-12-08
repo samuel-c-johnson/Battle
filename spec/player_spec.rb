@@ -12,7 +12,7 @@ describe Player do
 
   describe '#hitpoints' do
     it 'reduces a player\'s hitpoints by 10' do
-    expect(sam.hitpoints).to eq(90)
+    expect(sam.reduce_hp).to eq(90)
     end
   end
 
